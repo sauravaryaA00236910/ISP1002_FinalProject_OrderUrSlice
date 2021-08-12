@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var pizzaListCell: UITableView!
     
     var pizzaListArray:[PizzaDetails] = [PizzaDetails]()
+    var selectedRowText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pizzaListArray.count
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRowText = self.pizzaListArray[indexPath.row].description
+    }
     
     
     @IBAction func customize(_ sender: Any) {
@@ -64,7 +68,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             segue.destination as! CustomizeViewController
         }
         else if segue.identifier == "addToCartDirectly"{
-            segue.destination as! AddToCartViewController
+            let dst = segue.destination as! AddToCartViewController
+            dst.addToCartArray.append(selectedRowText)
         }
     }
     
