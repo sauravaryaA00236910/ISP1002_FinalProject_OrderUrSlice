@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700C93FB26C3ED6800BD4140 /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700C93FA26C3ED6800BD4140 /* CustomizeViewController.swift */; };
+		70851A4826C4C57D000980D6 /* AddToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70851A4726C4C57D000980D6 /* AddToCartViewController.swift */; };
 		7095D62326C110D500674E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095D62226C110D500674E97 /* AppDelegate.swift */; };
 		7095D62526C110D500674E97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095D62426C110D500674E97 /* SceneDelegate.swift */; };
 		7095D62726C110D500674E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095D62626C110D500674E97 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700C93FA26C3ED6800BD4140 /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		70851A4726C4C57D000980D6 /* AddToCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewController.swift; sourceTree = "<group>"; };
 		7095D61F26C110D500674E97 /* FinalProject_OrderUrSlice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject_OrderUrSlice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7095D62226C110D500674E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7095D62426C110D500674E97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				7095D62226C110D500674E97 /* AppDelegate.swift */,
 				7095D62426C110D500674E97 /* SceneDelegate.swift */,
 				7095D62626C110D500674E97 /* ViewController.swift */,
+				700C93FA26C3ED6800BD4140 /* CustomizeViewController.swift */,
+				70851A4726C4C57D000980D6 /* AddToCartViewController.swift */,
 				7095D62826C110D500674E97 /* Main.storyboard */,
 				7095D62B26C110D700674E97 /* Assets.xcassets */,
 				7095D62D26C110D700674E97 /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			files = (
 				7095D62726C110D500674E97 /* ViewController.swift in Sources */,
 				7095D62326C110D500674E97 /* AppDelegate.swift in Sources */,
+				700C93FB26C3ED6800BD4140 /* CustomizeViewController.swift in Sources */,
+				70851A4826C4C57D000980D6 /* AddToCartViewController.swift in Sources */,
 				7095D62526C110D500674E97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
