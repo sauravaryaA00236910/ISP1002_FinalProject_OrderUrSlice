@@ -81,6 +81,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         selectedPizza = selectedRowText
         performSegue(withIdentifier: "addToCartDirectly", sender: self)
     }
+    
+    @IBAction func viewCart(_ sender: Any) {
+        performSegue(withIdentifier: "viewCart", sender: self)
+    }
+    
 }
 
 

@@ -13,7 +13,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var addToCartCell: UITableView!
     
 //    var appendItem = ""
-    var selectedDeleteRow:AddToCartListItem = AddToCartListItem()
+    var selectedRow:AddToCartListItem = AddToCartListItem()
     var addToCartArray:[AddToCartListItem] = [AddToCartListItem]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -47,18 +47,31 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        addToCartCell.deselectRow(at: indexPath, animated: true)
-        selectedDeleteRow = addToCartArray[indexPath.row]
+        selectedRow = addToCartArray[indexPath.row]
 //        self.deleteItem(item: selectedDeleteRow)
 //        getAllItems()
     }
-    
-    
+        
     @IBAction func deleteSelectedItem(_ sender: Any) {
-        self.deleteItem(item: selectedDeleteRow)
+        self.deleteItem(item: selectedRow)
         getAllItems()
     }
-        
-    /*
+    
+    
+    @IBAction func customizeItem(_ sender: Any) {
+        performSegue(withIdentifier: "customizeItem", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "customizeItem"{
+            let dst = segue.destination as! CustomizeViewController
+    //        dst.addToCartArray += selectedArray
+            dst.updateRow = selectedRow
+    //        dst.appendItem = selectedPizza
+        }
+    }
+    
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -103,6 +116,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
             
         }
     }
+    
     func updateItem(item: AddToCartListItem, newPizzaItem: String){
         item.pizzaItem = newPizzaItem
         do{

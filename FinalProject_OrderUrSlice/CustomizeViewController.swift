@@ -16,6 +16,7 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var size: String = ""
     var crust:String = ""
     var topping:String = ""
+    var updateRow:AddToCartListItem = AddToCartListItem()
     
     var selectPickerData = [["None", "Regular", "Medium", "Large"],["None", "Hand Tossed","Cheese Burst","Fresh Pan"],["None", "Crisp Onion", "Golden Corn", "Red Pepper"]]
     
@@ -51,16 +52,29 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dst = segue.destination as! AddToCartViewController
-//        dst.addToCartArray += selectedArray
-        dst.createItem(pizzaItem: selectedPizza)
-//        dst.appendItem = selectedPizza
+        if segue.identifier == "addToCart"{
+            let dst = segue.destination as! AddToCartViewController
+    //        dst.addToCartArray += selectedArray
+            dst.createItem(pizzaItem: selectedPizza)
+    //        dst.appendItem = selectedPizza
+        }
+        else if segue.identifier == "updateCartItem"{
+            let dst = segue.destination as! AddToCartViewController
+            dst.updateItem(item: updateRow, newPizzaItem: selectedPizza)
+//            dst.appendItem = selectedPizza
+        }
     }
     
     @IBAction func addToCartBtn(_ sender: Any) {
 //        self.selectedArray.append(selectedPizza)
         selectedPizza = "\(size): \(crust): \(topping)"
         performSegue(withIdentifier: "addToCart", sender: self)
+    }
+    
+        
+    @IBAction func updateCartItem(_ sender: Any) {
+        selectedPizza = "\(size): \(crust): \(topping)"
+        performSegue(withIdentifier: "updateCartItem", sender: self)
     }
     
     /*
