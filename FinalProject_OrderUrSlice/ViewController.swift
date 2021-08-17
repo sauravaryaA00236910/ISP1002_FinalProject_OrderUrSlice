@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var pizzaListArray:[PizzaDetails] = [PizzaDetails]()
     var selectedRowText = ""
+    var selectedPizza = ""
+    var selectedRowArray:[String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,20 +66,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "customiza"{
-            segue.destination as! CustomizeViewController
+        if segue.identifier == "customize"{
+            let dst = segue.destination as! CustomizeViewController
         }
         else if segue.identifier == "addToCartDirectly"{
             let dst = segue.destination as! AddToCartViewController
-            dst.addToCartArray.append(selectedRowText)
+            dst.createItem(pizzaItem: selectedPizza)
+//            dst.appendItem = selectedPizza
         }
     }
     
     
     @IBAction func addToCartDirectly(_ sender: Any) {
+        selectedPizza = selectedRowText
         performSegue(withIdentifier: "addToCartDirectly", sender: self)
     }
-    
 }
 
 

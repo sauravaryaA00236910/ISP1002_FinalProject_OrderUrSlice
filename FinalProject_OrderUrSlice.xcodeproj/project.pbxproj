@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7000CF8626CB8DEB00E2E24F /* AddToCartList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7000CF8426CB8DEB00E2E24F /* AddToCartList.xcdatamodeld */; };
+		7000CFBA26CBB65900E2E24F /* AddToCartListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7000CFB826CBB65900E2E24F /* AddToCartListItem+CoreDataClass.swift */; };
+		7000CFBB26CBB65900E2E24F /* AddToCartListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7000CFB926CBB65900E2E24F /* AddToCartListItem+CoreDataProperties.swift */; };
 		700C93FB26C3ED6800BD4140 /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700C93FA26C3ED6800BD4140 /* CustomizeViewController.swift */; };
 		70851A4826C4C57D000980D6 /* AddToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70851A4726C4C57D000980D6 /* AddToCartViewController.swift */; };
 		7095D62326C110D500674E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095D62226C110D500674E97 /* AppDelegate.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7000CF8526CB8DEB00E2E24F /* AddToCartList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddToCartList.xcdatamodel; sourceTree = "<group>"; };
+		7000CFB826CBB65900E2E24F /* AddToCartListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddToCartListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7000CFB926CBB65900E2E24F /* AddToCartListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddToCartListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		700C93FA26C3ED6800BD4140 /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
 		70851A4726C4C57D000980D6 /* AddToCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewController.swift; sourceTree = "<group>"; };
 		7095D61F26C110D500674E97 /* FinalProject_OrderUrSlice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject_OrderUrSlice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7000CFBC26CBB66700E2E24F /* AddToCartListItem */ = {
+			isa = PBXGroup;
+			children = (
+				7000CFB826CBB65900E2E24F /* AddToCartListItem+CoreDataClass.swift */,
+				7000CFB926CBB65900E2E24F /* AddToCartListItem+CoreDataProperties.swift */,
+			);
+			path = AddToCartListItem;
+			sourceTree = "<group>";
+		};
 		7095D61626C110D500674E97 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +75,7 @@
 		7095D62126C110D500674E97 /* FinalProject_OrderUrSlice */ = {
 			isa = PBXGroup;
 			children = (
+				7000CFBC26CBB66700E2E24F /* AddToCartListItem */,
 				7095D62226C110D500674E97 /* AppDelegate.swift */,
 				7095D62426C110D500674E97 /* SceneDelegate.swift */,
 				7095D62626C110D500674E97 /* ViewController.swift */,
@@ -69,6 +85,7 @@
 				7095D62B26C110D700674E97 /* Assets.xcassets */,
 				7095D62D26C110D700674E97 /* LaunchScreen.storyboard */,
 				7095D63026C110D700674E97 /* Info.plist */,
+				7000CF8426CB8DEB00E2E24F /* AddToCartList.xcdatamodeld */,
 			);
 			path = FinalProject_OrderUrSlice;
 			sourceTree = "<group>";
@@ -143,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7000CF8626CB8DEB00E2E24F /* AddToCartList.xcdatamodeld in Sources */,
+				7000CFBB26CBB65900E2E24F /* AddToCartListItem+CoreDataProperties.swift in Sources */,
 				7095D62726C110D500674E97 /* ViewController.swift in Sources */,
+				7000CFBA26CBB65900E2E24F /* AddToCartListItem+CoreDataClass.swift in Sources */,
 				7095D62326C110D500674E97 /* AppDelegate.swift in Sources */,
 				700C93FB26C3ED6800BD4140 /* CustomizeViewController.swift in Sources */,
 				70851A4826C4C57D000980D6 /* AddToCartViewController.swift in Sources */,
@@ -347,6 +367,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7000CF8426CB8DEB00E2E24F /* AddToCartList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7000CF8526CB8DEB00E2E24F /* AddToCartList.xcdatamodel */,
+			);
+			currentVersion = 7000CF8526CB8DEB00E2E24F /* AddToCartList.xcdatamodel */;
+			path = AddToCartList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7095D61726C110D500674E97 /* Project object */;
 }

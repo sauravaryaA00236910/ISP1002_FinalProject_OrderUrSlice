@@ -13,8 +13,13 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var pizzaName: UILabel!
     
     var selectedPizza = ""
+    var size: String = ""
+    var crust:String = ""
+    var topping:String = ""
     
     var selectPickerData = [["None", "Regular", "Medium", "Large"],["None", "Hand Tossed","Cheese Burst","Fresh Pan"],["None", "Crisp Onion", "Golden Corn", "Red Pepper"]]
+    
+    var selectedArray:[String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,19 +44,25 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let selectedSize = pickerView.selectedRow(inComponent: 0)
         let selectedCrust = pickerView.selectedRow(inComponent: 1)
         let selectedTopping = pickerView.selectedRow(inComponent: 2)
-        let size = selectPickerData[0][selectedSize]
-        let crust = selectPickerData[1][selectedCrust]
-        let topping = selectPickerData[2][selectedTopping]
-        selectedPizza = "\(size): \(crust): \(topping)"
+        size = selectPickerData[0][selectedSize]
+        crust = selectPickerData[1][selectedCrust]
+        topping = selectPickerData[2][selectedTopping]
+//        selectedPizza = "\(size): \(crust): \(topping)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dst = segue.destination as! AddToCartViewController
+//        dst.addToCartArray += selectedArray
+        dst.createItem(pizzaItem: selectedPizza)
+//        dst.appendItem = selectedPizza
     }
     
     @IBAction func addToCartBtn(_ sender: Any) {
+//        self.selectedArray.append(selectedPizza)
+        selectedPizza = "\(size): \(crust): \(topping)"
         performSegue(withIdentifier: "addToCart", sender: self)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let dst = segue.destination as! AddToCartViewController
-        dst.addToCartArray.append(selectedPizza)
-    }
+    
     /*
     // MARK: - Navigation
 
