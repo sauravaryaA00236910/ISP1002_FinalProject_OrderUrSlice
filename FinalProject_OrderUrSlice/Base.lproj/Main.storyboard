@@ -75,7 +75,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJU-Gi-svS">
-                                <rect key="frame" x="189" y="603" width="60" height="21"/>
+                                <rect key="frame" x="189" y="608" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,6 @@
                             <constraint firstItem="dyk-Zc-qq4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-253.5" id="6G2-lO-BHC"/>
                             <constraint firstItem="ewm-SN-Jlb" firstAttribute="leading" secondItem="1W4-O7-JHb" secondAttribute="trailing" constant="121" id="6ac-TR-ALC"/>
                             <constraint firstItem="8Wv-FA-GH2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="8YO-UL-vw7"/>
-                            <constraint firstItem="ZJP-eg-hyR" firstAttribute="top" secondItem="AJU-Gi-svS" secondAttribute="bottom" constant="5" id="9Gq-5J-W04"/>
                             <constraint firstItem="ewm-SN-Jlb" firstAttribute="leading" secondItem="ZJP-eg-hyR" secondAttribute="trailing" constant="8" id="BA7-7z-gUo"/>
                             <constraint firstItem="Iah-As-YyZ" firstAttribute="top" secondItem="dyk-Zc-qq4" secondAttribute="bottom" constant="7" id="CLU-9b-yu9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJU-Gi-svS" secondAttribute="trailing" constant="126" id="GIH-W6-Dqh"/>
