@@ -121,6 +121,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         item.pizzaItem = newPizzaItem
         do{
             try context.save()
+            getAllItems()
         }
         catch{
             

@@ -10,13 +10,15 @@ import UIKit
 class PizzaDetails{
     var name: String
     var desc: String
+    var price: Int
     
-    init(name: String, desc: String){
+    init(name: String, desc: String, price: Int){
         self.name = name
         self.desc = desc
+        self.price = price
     }
     
-    public var description: String { return name + ": " + desc}
+    public var description: String { return name + ": " + desc + ": $" + String(price)}
     
 }
 
@@ -24,9 +26,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var pizzaListCell: UITableView!
     
+    @IBOutlet weak var readyMadePizzaAmount: UITextField!
+    
     var pizzaListArray:[PizzaDetails] = [PizzaDetails]()
     var selectedRowText = ""
     var selectedPizza = ""
+    var pizzaAmount: Int = 0
     var selectedRowArray:[String] = [String]()
     
     override func viewDidLoad() {
@@ -36,10 +41,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.pizzaListCell.delegate = self
         self.pizzaListCell.dataSource = self
         
-        self.pizzaListArray.append(PizzaDetails(name: "Classic Margherita", desc: "Classic delight with mozzarella cheese"))
-        self.pizzaListArray.append(PizzaDetails(name: "The Unthinkable Pizza", desc: "Loaded with plant based protein topping along with black olives and red paprika"))
-        self.pizzaListArray.append(PizzaDetails(name: "Pepper Barbecue Chicken", desc: "Pepper barbecue chicken for that extra zing"))
-        self.pizzaListArray.append(PizzaDetails(name: "Chicken Golden Delight", desc: "Double pepper barbecue chicken, golden corn and extra cheese, true delight"))
+        self.pizzaListArray.append(PizzaDetails(name: "Classic Margherita", desc: "Classic delight with mozzarella cheese", price: 2))
+        self.pizzaListArray.append(PizzaDetails(name: "The Unthinkable Pizza", desc: "Loaded with plant based protein topping along with black olives and red paprika", price: 3))
+        self.pizzaListArray.append(PizzaDetails(name: "Pepper Barbecue Chicken", desc: "Pepper barbecue chicken for that extra zing", price: 4))
+        self.pizzaListArray.append(PizzaDetails(name: "Chicken Golden Delight", desc: "Double pepper barbecue chicken, golden corn and extra cheese, true delight", price: 4))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let model = self.pizzaListArray[indexPath.row]
         
         cell.textLabel?.text = model.description
-//        cell.textLabel?.text = model.desc
         
         return cell
     }
@@ -58,6 +62,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRowText = self.pizzaListArray[indexPath.row].description
+        pizzaAmount = self.pizzaListArray[indexPath.row].price
+        if !readyMadePizzaAmount.isEqual(pizzaAmount){
+            readyMadePizzaAmount.text = "$" + String(pizzaAmount)
+        }
     }
     
     
@@ -72,7 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else if segue.identifier == "addToCartDirectly"{
             let dst = segue.destination as! AddToCartViewController
             dst.createItem(pizzaItem: selectedPizza)
-//            dst.appendItem = selectedPizza
         }
     }
     

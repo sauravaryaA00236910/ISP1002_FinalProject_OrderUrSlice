@@ -7,20 +7,62 @@
 
 import UIKit
 
+class PizzaCustomize{
+    var customizeField: String
+    var price: Int
+    
+    init(customizeField: String, price: Int){
+        self.customizeField = customizeField
+        self.price = price
+    }
+    
+    public var description: String { return customizeField + ": $" + String(price)}
+    
+}
+//class PizzaCrust{
+//    var crust: String
+//    var price: Int
+//
+//    init(crust: String, price: Int){
+//        self.crust = crust
+//        self.price = price
+//    }
+//
+//    public var description: String { return crust + ": $" + String(price)}
+//
+//}
+//class PizzaTopping{
+//    var topping: String
+//    var price: Int
+//
+//    init(topping: String, price: Int){
+//        self.topping = topping
+//        self.price = price
+//    }
+//
+//    public var description: String { return topping + ": $" + String(price)}
+//
+//}
+
 class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var selectPickerView: UIPickerView!
     @IBOutlet weak var pizzaName: UILabel!
+    @IBOutlet weak var customPizzaAmount: UITextField!
     
     var selectedPizza = ""
     var size: String = ""
     var crust:String = ""
     var topping:String = ""
+    var sizePrice: Int = 0
+    var crustPrice: Int = 0
+    var toppingPrice:Int = 0
+    var totalPrice: Int = 0
     var updateRow:AddToCartListItem = AddToCartListItem()
     
-    var selectPickerData = [["None", "Regular", "Medium", "Large"],["None", "Hand Tossed","Cheese Burst","Fresh Pan"],["None", "Crisp Onion", "Golden Corn", "Red Pepper"]]
+    var selectedArray:[PizzaCustomize] = [PizzaCustomize]()
+    var selectPickerData = [[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Regular", price: 1), PizzaCustomize(customizeField: "Medium", price: 2), PizzaCustomize(customizeField: "Large", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Hand Tossed", price: 1), PizzaCustomize(customizeField: "Cheese Burst", price: 2), PizzaCustomize(customizeField: "Fresh Pan", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Crisp Onion", price: 1), PizzaCustomize(customizeField: "Golden Corn", price: 1), PizzaCustomize(customizeField: "Red Pepper", price: 1)]]
     
-    var selectedArray:[String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,17 +80,29 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return selectPickerData[component].count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return selectPickerData[component][row]
+        
+        return selectPickerData[component][row].description
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedSize = pickerView.selectedRow(inComponent: 0)
         let selectedCrust = pickerView.selectedRow(inComponent: 1)
         let selectedTopping = pickerView.selectedRow(inComponent: 2)
-        size = selectPickerData[0][selectedSize]
-        crust = selectPickerData[1][selectedCrust]
-        topping = selectPickerData[2][selectedTopping]
+        size = selectPickerData[0][selectedSize].description
+        crust = selectPickerData[1][selectedCrust].description
+        topping = selectPickerData[2][selectedTopping].description
+        sizePrice = selectPickerData[0][selectedSize].price
+        crustPrice = selectPickerData[1][selectedCrust].price
+        toppingPrice = selectPickerData[2][selectedTopping].price
 //        selectedPizza = "\(size): \(crust): \(topping)"
+    }
+    
+    
+    @IBAction func calculateTotal(_ sender: Any) {
+        if !customPizzaAmount.isEqual(sizePrice+crustPrice+toppingPrice){
+            totalPrice = sizePrice + crustPrice + toppingPrice
+            customPizzaAmount.text = "$"+String(totalPrice)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
