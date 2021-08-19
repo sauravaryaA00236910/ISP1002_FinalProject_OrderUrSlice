@@ -18,6 +18,8 @@
 		7095D62A26C110D500674E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7095D62826C110D500674E97 /* Main.storyboard */; };
 		7095D62C26C110D700674E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7095D62B26C110D700674E97 /* Assets.xcassets */; };
 		7095D62F26C110D700674E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7095D62D26C110D700674E97 /* LaunchScreen.storyboard */; };
+		70A7299526CDE40000955DD6 /* sarthak-sharma-A_GwTLJH-ew-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70A7299426CDE40000955DD6 /* sarthak-sharma-A_GwTLJH-ew-unsplash.jpg */; };
+		70A7299726CDE5B200955DD6 /* lasse-bergqvist-u6NiMLJftRs-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70A7299626CDE5B200955DD6 /* lasse-bergqvist-u6NiMLJftRs-unsplash.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7095D62B26C110D700674E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7095D62E26C110D700674E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7095D63026C110D700674E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A7299426CDE40000955DD6 /* sarthak-sharma-A_GwTLJH-ew-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sarthak-sharma-A_GwTLJH-ew-unsplash.jpg"; sourceTree = "<group>"; };
+		70A7299626CDE5B200955DD6 /* lasse-bergqvist-u6NiMLJftRs-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lasse-bergqvist-u6NiMLJftRs-unsplash.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				7095D62D26C110D700674E97 /* LaunchScreen.storyboard */,
 				7095D63026C110D700674E97 /* Info.plist */,
 				7000CF8426CB8DEB00E2E24F /* AddToCartList.xcdatamodeld */,
+				70A7299426CDE40000955DD6 /* sarthak-sharma-A_GwTLJH-ew-unsplash.jpg */,
+				70A7299626CDE5B200955DD6 /* lasse-bergqvist-u6NiMLJftRs-unsplash.jpg */,
 			);
 			path = FinalProject_OrderUrSlice;
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 			files = (
 				7095D62F26C110D700674E97 /* LaunchScreen.storyboard in Resources */,
 				7095D62C26C110D700674E97 /* Assets.xcassets in Resources */,
+				70A7299726CDE5B200955DD6 /* lasse-bergqvist-u6NiMLJftRs-unsplash.jpg in Resources */,
+				70A7299526CDE40000955DD6 /* sarthak-sharma-A_GwTLJH-ew-unsplash.jpg in Resources */,
 				7095D62A26C110D500674E97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

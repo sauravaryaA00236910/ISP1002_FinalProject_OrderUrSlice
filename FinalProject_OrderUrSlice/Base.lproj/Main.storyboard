@@ -211,16 +211,8 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWb-Gz-fzi">
-                                <rect key="frame" x="67" y="115" width="241" height="127"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="eSr-PD-Yk5"/>
-                                </constraints>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOS-yY-cdb">
-                                <rect key="frame" x="0.0" y="251" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yOS-yY-cdb">
+                                <rect key="frame" x="0.0" y="242" width="375" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Topping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-5x-sXN">
                                 <rect key="frame" x="247" y="274" width="122" height="21"/>
@@ -275,37 +267,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Custom Pizza In Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-UL-eQF">
+                                <rect key="frame" x="101" y="453" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item In Focus" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9m-oF-B3q">
+                                <rect key="frame" x="16" y="482" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lasse-bergqvist-u6NiMLJftRs-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uWb-Gz-fzi">
+                                <rect key="frame" x="33" y="87" width="309" height="177"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="6xw-mz-unW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0DS-xZ-Xyk"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yYh-oe-gCI" firstAttribute="leading" secondItem="lmi-5O-43j" secondAttribute="trailing" constant="4" id="0Tp-9Z-QeY"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="leading" secondItem="71H-3g-A4Q" secondAttribute="leading" id="0k4-Ek-JsO"/>
-                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" constant="67" id="3q7-xv-vJR"/>
+                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="yDz-e7-Eaf" secondAttribute="centerX" id="GKS-bo-5F7"/>
+                            <constraint firstItem="yOS-yY-cdb" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" id="HLN-Gg-Ddh"/>
+                            <constraint firstItem="RLh-UL-eQF" firstAttribute="centerX" secondItem="b93-mL-1H1" secondAttribute="centerX" id="Ik3-8k-pDQ"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="leading" secondItem="b93-mL-1H1" secondAttribute="leadingMargin" id="NXq-84-LAQ"/>
-                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="top" secondItem="yDz-e7-Eaf" secondAttribute="bottom" constant="34" id="Rno-e9-ZTV"/>
+                            <constraint firstItem="lmi-5O-43j" firstAttribute="top" secondItem="yOS-yY-cdb" secondAttribute="bottom" constant="77" id="UU6-sM-q0U"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="centerY" secondItem="yYh-oe-gCI" secondAttribute="centerY" id="XDN-ld-fxr"/>
                             <constraint firstAttribute="bottom" secondItem="75e-6V-7WJ" secondAttribute="bottom" constant="20" symbolic="YES" id="YaY-WZ-pX1"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="baseline" secondItem="raz-Jx-Y9X" secondAttribute="baseline" id="Zf9-0V-qsi"/>
                             <constraint firstItem="0DS-xZ-Xyk" firstAttribute="trailing" secondItem="NeA-5x-sXN" secondAttribute="trailing" constant="6" id="auw-bm-S4g"/>
+                            <constraint firstItem="NeA-5x-sXN" firstAttribute="top" secondItem="uWb-Gz-fzi" secondAttribute="bottom" constant="10" id="b8Y-i2-Oqh"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="leading" secondItem="b93-mL-1H1" secondAttribute="leading" constant="144" id="bZx-bF-HRh"/>
-                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="b93-mL-1H1" secondAttribute="centerX" id="c6d-Nt-vwW"/>
                             <constraint firstItem="yDz-e7-Eaf" firstAttribute="top" secondItem="0DS-xZ-Xyk" secondAttribute="top" constant="8" id="dgc-IP-LHK"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="top" secondItem="lmi-5O-43j" secondAttribute="bottom" constant="48" id="e60-j4-SRU"/>
                             <constraint firstItem="1US-Yz-srU" firstAttribute="baseline" secondItem="71H-3g-A4Q" secondAttribute="baseline" id="ee3-HP-6xR"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="leading" secondItem="CtK-5z-NuG" secondAttribute="trailing" constant="8" symbolic="YES" id="gC7-dz-ikO"/>
                             <constraint firstItem="NeA-5x-sXN" firstAttribute="leading" secondItem="1US-Yz-srU" secondAttribute="trailing" constant="15" id="h0k-bV-Kli"/>
+                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" constant="33" id="kcF-4l-IBS"/>
                             <constraint firstItem="raz-Jx-Y9X" firstAttribute="leading" secondItem="75e-6V-7WJ" secondAttribute="trailing" constant="77" id="miq-qm-5v9"/>
-                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="yDz-e7-Eaf" secondAttribute="centerX" id="n2Q-Du-3Hg"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" constant="16" id="ne4-cU-Gi0"/>
+                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="top" secondItem="yDz-e7-Eaf" secondAttribute="bottom" constant="6" id="o7L-Ws-k5n"/>
+                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="b93-mL-1H1" secondAttribute="centerX" id="r7c-AK-EXM"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="centerY" secondItem="CtK-5z-NuG" secondAttribute="centerY" id="rgL-Eg-tHS"/>
-                            <constraint firstItem="NeA-5x-sXN" firstAttribute="top" secondItem="uWb-Gz-fzi" secondAttribute="bottom" constant="32" id="wUb-C5-7VB"/>
+                            <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="yOS-yY-cdb" secondAttribute="centerX" id="uBX-zR-1zl"/>
                             <constraint firstItem="1US-Yz-srU" firstAttribute="baseline" secondItem="NeA-5x-sXN" secondAttribute="baseline" id="yTe-6k-Ry7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Customize" id="2I8-tT-ypP"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="currentSelected" destination="c9m-oF-B3q" id="5g8-G9-R8t"/>
                         <outlet property="customPizzaAmount" destination="lmi-5O-43j" id="7eU-EN-k2o"/>
                         <outlet property="selectPickerView" destination="yOS-yY-cdb" id="YBJ-bq-h1s"/>
                         <segue destination="BhM-oO-KEV" kind="show" identifier="addToCart" id="lcR-SJ-LWI"/>
@@ -337,9 +353,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hNx-bt-gjl"/>
-        <segue reference="DtA-vQ-rAt"/>
+        <segue reference="lcR-SJ-LWI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="lasse-bergqvist-u6NiMLJftRs-unsplash.jpg" width="4032" height="3024"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

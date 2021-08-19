@@ -49,6 +49,7 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var selectPickerView: UIPickerView!
     @IBOutlet weak var pizzaName: UILabel!
     @IBOutlet weak var customPizzaAmount: UITextField!
+    @IBOutlet weak var currentSelected: UITextField!
     
     var selectedPizza = ""
     var size: String = ""
@@ -94,7 +95,8 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         sizePrice = selectPickerData[0][selectedSize].price
         crustPrice = selectPickerData[1][selectedCrust].price
         toppingPrice = selectPickerData[2][selectedTopping].price
-//        selectedPizza = "\(size): \(crust): \(topping)"
+        selectedPizza = "\(size): \(crust): \(topping)"
+        currentSelected.text = selectedPizza
     }
     
     
