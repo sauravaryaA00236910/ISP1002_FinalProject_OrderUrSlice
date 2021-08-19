@@ -60,9 +60,10 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var toppingPrice:Int = 0
     var totalPrice: Int = 0
     var updateRow:AddToCartListItem = AddToCartListItem()
+    var addToCartArrayDuplicate: [AddToCartListItem] = [AddToCartListItem]()
     
     var selectedArray:[PizzaCustomize] = [PizzaCustomize]()
-    var selectPickerData = [[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Regular", price: 1), PizzaCustomize(customizeField: "Medium", price: 2), PizzaCustomize(customizeField: "Large", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Hand Tossed", price: 1), PizzaCustomize(customizeField: "Cheese Burst", price: 2), PizzaCustomize(customizeField: "Fresh Pan", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Crisp Onion", price: 1), PizzaCustomize(customizeField: "Golden Corn", price: 1), PizzaCustomize(customizeField: "Red Pepper", price: 1)]]
+    var selectPickerData = [[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Regular", price: 1), PizzaCustomize(customizeField: "Medium", price: 2), PizzaCustomize(customizeField: "Large", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Hand Tossed", price: 1), PizzaCustomize(customizeField: "Cheese Burst", price: 2),PizzaCustomize(customizeField: "Thin Crust", price: 2), PizzaCustomize(customizeField: "Fresh Pan", price: 3)],[PizzaCustomize(customizeField: "None", price: 0), PizzaCustomize(customizeField: "Grilled Mushroom", price: 1), PizzaCustomize(customizeField: "Crisp Onion", price: 1), PizzaCustomize(customizeField: "Fresh Tomato", price: 1), PizzaCustomize(customizeField: "Golden Corn", price: 1), PizzaCustomize(customizeField: "Red Pepper", price: 1), PizzaCustomize(customizeField: "Barbeque Chicken", price: 2), PizzaCustomize(customizeField: "Peri-Peri Chicken", price: 2), PizzaCustomize(customizeField: "Chicken Sausage", price: 2), PizzaCustomize(customizeField: "Chicken Pepproni", price: 2), PizzaCustomize(customizeField: "Chicken Tikka", price: 2)]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +117,13 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         else if segue.identifier == "updateCartItem"{
             let dst = segue.destination as! AddToCartViewController
-            dst.updateItem(item: updateRow, newPizzaItem: selectedPizza)
+            if addToCartArrayDuplicate.contains(updateRow){
+                dst.updateItem(item: updateRow, newPizzaItem: selectedPizza)
+            }else{
+                let uialert = UIAlertController(title: "Error", message: "Please click on the Add To Cart New Item option to add newly created item.", preferredStyle: UIAlertController.Style.alert)
+                      uialert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+                   self.present(uialert, animated: true, completion: nil)
+            }
         }
     }
     

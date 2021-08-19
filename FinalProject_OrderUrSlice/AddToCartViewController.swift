@@ -66,9 +66,9 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
             let dst = segue.destination as! CustomizeViewController
             if addToCartArray.contains(selectedRow){
                 dst.updateRow = selectedRow
-
+                dst.addToCartArrayDuplicate = addToCartArray
             }else{
-                let uialert = UIAlertController(title: "Error", message: "Please select a cart item to customize", preferredStyle: UIAlertController.Style.alert)
+                let uialert = UIAlertController(title: "Error", message: "Please select a cart item to customize.", preferredStyle: UIAlertController.Style.alert)
                       uialert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
                    self.present(uialert, animated: true, completion: nil)
             }

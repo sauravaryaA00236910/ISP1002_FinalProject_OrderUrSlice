@@ -50,8 +50,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.pizzaListArray.append(PizzaDetails(name: "Classic Margherita", desc: "Classic delight with mozzarella cheese", price: 2))
         self.pizzaListArray.append(PizzaDetails(name: "The Unthinkable Pizza", desc: "Loaded with plant based protein topping along with black olives and red paprika", price: 3))
+        self.pizzaListArray.append(PizzaDetails(name: "Farmhouse", desc: "Delightful combination of onion, capsicum, tomato & grilled mushroom", price: 3))
+        self.pizzaListArray.append(PizzaDetails(name: "Veggie Paradise", desc: "The awesome veggie! Golden corn, black olives, capsicum, red peprika", price: 3))
+        self.pizzaListArray.append(PizzaDetails(name: "Moroccan Spice Pasta Pizza", desc: "A pizza loaded with a spicy combination of Harissa sauce and delicious pasta", price: 4))
         self.pizzaListArray.append(PizzaDetails(name: "Pepper Barbecue Chicken", desc: "Pepper barbecue chicken for that extra zing", price: 4))
         self.pizzaListArray.append(PizzaDetails(name: "Chicken Golden Delight", desc: "Double pepper barbecue chicken, golden corn and extra cheese, true delight", price: 4))
+        self.pizzaListArray.append(PizzaDetails(name: "Non Veg Supreme", desc: "Supreme combination of black olives, onion, capcicum, mushroom, pepper barbeque chicken, peri-peri chicken and grilled chicken rashrs", price: 5))
+        self.pizzaListArray.append(PizzaDetails(name: "Chicken Fiesta", desc: "Grilled chicken rashers, peri-peri chicken, onion & capsicum, a complete fiesta", price: 3))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
