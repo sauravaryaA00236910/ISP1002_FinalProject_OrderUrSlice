@@ -12,7 +12,6 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var addToCartCell: UITableView!
     
-//    var appendItem = ""
     var selectedRow:AddToCartListItem = AddToCartListItem()
     var addToCartArray:[AddToCartListItem] = [AddToCartListItem]()
     
@@ -25,16 +24,14 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.addToCartCell.delegate = self
         self.addToCartCell.dataSource = self
-//        // Do any additional setup after loading the view.
+//        Do any additional setup after loading the view.
         getAllItems()
-//        self.addToCartArray.append(<#AddToCartListItem#>)
-//        createItem(pizzaItem: appendItem)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addToCartArray.count
     }
-//
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.addToCartCell.dequeueReusableCell(withIdentifier: "addToCartCell")!
 
@@ -52,10 +49,6 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         self.deleteItem(item: selectedRow)
         getAllItems()
     }
-    
-//    @IBAction func backToHome(_ sender: Any) {
-//        performSegue(withIdentifier: "backToHome", sender: self)
-//    }
     
     @IBAction func customizeItem(_ sender: Any) {
         performSegue(withIdentifier: "customizeItem", sender: self)
@@ -100,8 +93,6 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     func createItem(pizzaItem: String){
         let newItem = AddToCartListItem(context: context)
         newItem.pizzaItem = pizzaItem
-//        newItem.pizzaDescription = Description
-//        newItem.pizzaPrice = pizzaPrice
         
         do{
             try context.save()

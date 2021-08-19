@@ -19,30 +19,6 @@ class PizzaCustomize{
     public var description: String { return customizeField + ": $" + String(price)}
     
 }
-//class PizzaCrust{
-//    var crust: String
-//    var price: Int
-//
-//    init(crust: String, price: Int){
-//        self.crust = crust
-//        self.price = price
-//    }
-//
-//    public var description: String { return crust + ": $" + String(price)}
-//
-//}
-//class PizzaTopping{
-//    var topping: String
-//    var price: Int
-//
-//    init(topping: String, price: Int){
-//        self.topping = topping
-//        self.price = price
-//    }
-//
-//    public var description: String { return topping + ": $" + String(price)}
-//
-//}
 
 class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -111,9 +87,7 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addToCart"{
             let dst = segue.destination as! AddToCartViewController
-    //        dst.addToCartArray += selectedArray
             dst.createItem(pizzaItem: selectedPizza)
-    //        dst.appendItem = selectedPizza
         }
         else if segue.identifier == "updateCartItem"{
             let dst = segue.destination as! AddToCartViewController
@@ -128,7 +102,6 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func addToCartBtn(_ sender: Any) {
-//        self.selectedArray.append(selectedPizza)
         selectedPizza = "\(size): \(crust): \(topping)"
         performSegue(withIdentifier: "addToCart", sender: self)
     }

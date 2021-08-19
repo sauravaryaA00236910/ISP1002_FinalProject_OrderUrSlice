@@ -126,17 +126,17 @@
             <objects>
                 <viewController id="BhM-oO-KEV" customClass="AddToCartViewController" customModule="FinalProject_OrderUrSlice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezP-zv-pCK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrderUrSlice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRv-HB-28R">
-                                <rect key="frame" x="114.5" y="8" width="146" height="29"/>
+                                <rect key="frame" x="114.5" y="52" width="146" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q3e-qg-1xk">
-                                <rect key="frame" x="16" y="97" width="343" height="488"/>
+                                <rect key="frame" x="16" y="141" width="343" height="464"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addToCartCell" id="WRG-t2-0tv">
@@ -150,20 +150,20 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select to update or delete cart item below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ9-Fw-LBQ">
-                                <rect key="frame" x="16" y="52" width="323" height="21"/>
+                                <rect key="frame" x="16" y="96" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gja-ej-LVt">
-                                <rect key="frame" x="16" y="596" width="143" height="30"/>
+                                <rect key="frame" x="16" y="616" width="143" height="30"/>
                                 <state key="normal" title="Delete Selected Item"/>
                                 <connections>
                                     <action selector="deleteSelectedItem:" destination="BhM-oO-KEV" eventType="touchUpInside" id="VT8-Ap-uS8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4l-Ea-bdV">
-                                <rect key="frame" x="252" y="596" width="107" height="30"/>
+                                <rect key="frame" x="252" y="616" width="107" height="30"/>
                                 <state key="normal" title="Customize Item"/>
                                 <connections>
                                     <action selector="customizeItem:" destination="BhM-oO-KEV" eventType="touchUpInside" id="Szu-hF-dAf"/>
@@ -177,9 +177,9 @@
                             <constraint firstItem="gRv-HB-28R" firstAttribute="top" secondItem="tDo-DA-en5" secondAttribute="top" constant="8" id="6su-14-fb1"/>
                             <constraint firstItem="gRv-HB-28R" firstAttribute="centerX" secondItem="ezP-zv-pCK" secondAttribute="centerX" id="DnT-yb-g4F"/>
                             <constraint firstItem="WJ9-Fw-LBQ" firstAttribute="top" secondItem="gRv-HB-28R" secondAttribute="bottom" constant="15" id="KaZ-Ju-4Yr"/>
+                            <constraint firstItem="tDo-DA-en5" firstAttribute="trailing" secondItem="q3e-qg-1xk" secondAttribute="trailing" constant="16" id="OQf-jV-wfH"/>
                             <constraint firstItem="WJ9-Fw-LBQ" firstAttribute="leading" secondItem="ezP-zv-pCK" secondAttribute="leadingMargin" id="QGv-oa-PgF"/>
                             <constraint firstItem="tDo-DA-en5" firstAttribute="bottom" secondItem="gja-ej-LVt" secondAttribute="bottom" constant="21" id="VPK-mI-j3N"/>
-                            <constraint firstItem="q3e-qg-1xk" firstAttribute="trailing" secondItem="N4l-Ea-bdV" secondAttribute="trailing" id="WSJ-G6-uU2"/>
                             <constraint firstItem="gja-ej-LVt" firstAttribute="baseline" secondItem="N4l-Ea-bdV" secondAttribute="baseline" id="XDN-wj-shT"/>
                             <constraint firstItem="WJ9-Fw-LBQ" firstAttribute="leading" secondItem="gja-ej-LVt" secondAttribute="leading" id="ioO-i2-gcI"/>
                             <constraint firstItem="q3e-qg-1xk" firstAttribute="top" secondItem="WJ9-Fw-LBQ" secondAttribute="bottom" constant="24" id="jgc-nH-q7R"/>
@@ -202,46 +202,46 @@
             <objects>
                 <viewController id="CQw-bt-oe7" customClass="CustomizeViewController" customModule="FinalProject_OrderUrSlice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b93-mL-1H1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrderUrSlice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-e7-Eaf">
-                                <rect key="frame" x="115" y="8" width="145.5" height="29"/>
+                                <rect key="frame" x="115" y="52" width="145.5" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yOS-yY-cdb">
-                                <rect key="frame" x="0.0" y="222" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="266" width="375" height="192"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Topping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-5x-sXN">
-                                <rect key="frame" x="247" y="230" width="122" height="21"/>
+                                <rect key="frame" x="247" y="274" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Select Crust" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-Yz-srU">
-                                <rect key="frame" x="131" y="230" width="101" height="21"/>
+                                <rect key="frame" x="131" y="274" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raz-Jx-Y9X">
-                                <rect key="frame" x="244" y="597" width="118" height="30"/>
+                                <rect key="frame" x="244" y="617" width="118" height="30"/>
                                 <state key="normal" title="Update Cart Item"/>
                                 <connections>
                                     <action selector="updateCartItem:" destination="CQw-bt-oe7" eventType="touchUpInside" id="sm0-PK-Dfo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75e-6V-7WJ">
-                                <rect key="frame" x="16" y="597" width="151" height="30"/>
+                                <rect key="frame" x="16" y="617" width="151" height="30"/>
                                 <state key="normal" title="Add To Cart New Item"/>
                                 <connections>
                                     <action selector="addToCartBtn:" destination="CQw-bt-oe7" eventType="touchUpInside" id="7y6-tl-rp9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-5O-43j">
-                                <rect key="frame" x="144" y="515" width="97" height="34"/>
+                                <rect key="frame" x="144" y="535" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="uCp-R8-ICI"/>
                                 </constraints>
@@ -249,26 +249,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-oe-gCI">
-                                <rect key="frame" x="245" y="517" width="102" height="30"/>
+                                <rect key="frame" x="245" y="537" width="102" height="30"/>
                                 <state key="normal" title="Calculate Total"/>
                                 <connections>
                                     <action selector="calculateTotal:" destination="CQw-bt-oe7" eventType="touchUpInside" id="FMZ-zL-ckD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtK-5z-NuG">
-                                <rect key="frame" x="76" y="521.5" width="60" height="21"/>
+                                <rect key="frame" x="76" y="541.5" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71H-3g-A4Q">
-                                <rect key="frame" x="16" y="230" width="90" height="21"/>
+                                <rect key="frame" x="16" y="274" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Pizza In Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-UL-eQF">
-                                <rect key="frame" x="101" y="433" width="173" height="21"/>
+                                <rect key="frame" x="101" y="453" width="173" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +279,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lasse-bergqvist-u6NiMLJftRs-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uWb-Gz-fzi">
-                                <rect key="frame" x="33" y="43" width="309" height="177"/>
+                                <rect key="frame" x="33" y="87" width="309" height="177"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="6xw-mz-unW"/>
@@ -290,12 +290,14 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yYh-oe-gCI" firstAttribute="leading" secondItem="lmi-5O-43j" secondAttribute="trailing" constant="4" id="0Tp-9Z-QeY"/>
-                            <constraint firstItem="75e-6V-7WJ" firstAttribute="leading" secondItem="71H-3g-A4Q" secondAttribute="leading" id="0k4-Ek-JsO"/>
+                            <constraint firstItem="yOS-yY-cdb" firstAttribute="top" secondItem="uWb-Gz-fzi" secondAttribute="bottom" constant="2" id="ExE-aT-Cjq"/>
                             <constraint firstItem="uWb-Gz-fzi" firstAttribute="centerX" secondItem="yDz-e7-Eaf" secondAttribute="centerX" id="GKS-bo-5F7"/>
                             <constraint firstAttribute="bottom" secondItem="RLh-UL-eQF" secondAttribute="bottom" constant="193" id="GSY-ur-gyC"/>
                             <constraint firstItem="yOS-yY-cdb" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" id="HLN-Gg-Ddh"/>
                             <constraint firstItem="RLh-UL-eQF" firstAttribute="centerX" secondItem="b93-mL-1H1" secondAttribute="centerX" id="Ik3-8k-pDQ"/>
+                            <constraint firstItem="1US-Yz-srU" firstAttribute="leading" secondItem="71H-3g-A4Q" secondAttribute="trailing" constant="25" id="KBe-SB-2uz"/>
                             <constraint firstItem="75e-6V-7WJ" firstAttribute="leading" secondItem="b93-mL-1H1" secondAttribute="leadingMargin" id="NXq-84-LAQ"/>
+                            <constraint firstItem="71H-3g-A4Q" firstAttribute="leading" secondItem="0DS-xZ-Xyk" secondAttribute="leading" constant="16" id="Q9f-zl-mnV"/>
                             <constraint firstItem="c9m-oF-B3q" firstAttribute="top" secondItem="RLh-UL-eQF" secondAttribute="bottom" constant="8" symbolic="YES" id="RoR-SB-Euv"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="top" secondItem="yOS-yY-cdb" secondAttribute="bottom" constant="77" id="UU6-sM-q0U"/>
                             <constraint firstItem="lmi-5O-43j" firstAttribute="centerY" secondItem="yYh-oe-gCI" secondAttribute="centerY" id="XDN-ld-fxr"/>
@@ -354,7 +356,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sBf-B4-XfJ"/>
+        <segue reference="hNx-bt-gjl"/>
         <segue reference="lcR-SJ-LWI"/>
     </inferredMetricsTieBreakers>
     <resources>
