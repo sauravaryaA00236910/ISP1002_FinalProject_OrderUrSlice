@@ -115,7 +115,6 @@ class CustomizeViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         else if segue.identifier == "updateCartItem"{
             let dst = segue.destination as! AddToCartViewController
             dst.updateItem(item: updateRow, newPizzaItem: selectedPizza)
-//            dst.appendItem = selectedPizza
         }
     }
     

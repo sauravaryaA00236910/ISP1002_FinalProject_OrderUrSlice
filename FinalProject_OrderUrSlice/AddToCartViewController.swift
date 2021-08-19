@@ -21,7 +21,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Add to Cart List"
+        title = "Add to Cart"
         
         self.addToCartCell.delegate = self
         self.addToCartCell.dataSource = self
@@ -44,12 +44,8 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
 
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        addToCartCell.deselectRow(at: indexPath, animated: true)
         selectedRow = addToCartArray[indexPath.row]
-//        self.deleteItem(item: selectedDeleteRow)
-//        getAllItems()
     }
         
     @IBAction func deleteSelectedItem(_ sender: Any) {
@@ -57,6 +53,9 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         getAllItems()
     }
     
+//    @IBAction func backToHome(_ sender: Any) {
+//        performSegue(withIdentifier: "backToHome", sender: self)
+//    }
     
     @IBAction func customizeItem(_ sender: Any) {
         performSegue(withIdentifier: "customizeItem", sender: self)
@@ -65,9 +64,14 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "customizeItem"{
             let dst = segue.destination as! CustomizeViewController
-    //        dst.addToCartArray += selectedArray
-            dst.updateRow = selectedRow
-    //        dst.appendItem = selectedPizza
+            if addToCartArray.contains(selectedRow){
+                dst.updateRow = selectedRow
+
+            }else{
+                let uialert = UIAlertController(title: "Error", message: "Please select a cart item to customize", preferredStyle: UIAlertController.Style.alert)
+                      uialert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+                   self.present(uialert, animated: true, completion: nil)
+            }
         }
     }
     

@@ -26,6 +26,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var pizzaListCell: UITableView!
     
+    @IBOutlet weak var addToCartDirectly: generalButton!
+    @IBOutlet weak var viewCart: generalButton!
+    @IBOutlet weak var customize: generalButton!
     @IBOutlet weak var readyMadePizzaAmount: UITextField!
     
     var pizzaListArray:[PizzaDetails] = [PizzaDetails]()
@@ -37,6 +40,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        customize.backgroundColor = UIColor.secondarySystemBackground
+        customize.layer.cornerRadius = 4
+        customize.setTitleColor(UIColor.systemBlue, for: .normal)
+       
         
         self.pizzaListCell.delegate = self
         self.pizzaListCell.dataSource = self
@@ -92,7 +99,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func viewCart(_ sender: Any) {
         performSegue(withIdentifier: "viewCart", sender: self)
     }
-    
 }
 
-
+class generalButton: UIButton{
+    override func didMoveToWindow() {
+        self.backgroundColor = UIColor.secondarySystemBackground
+        self.layer.cornerRadius = 4
+        self.setTitleColor(UIColor.systemBlue, for: .normal)
+    }
+}
